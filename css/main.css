@@ -1,0 +1,2118 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto Regular";
+    font-size: 14px;
+}
+
+body {
+    flex-direction: column;
+    /*body is inline-flex element... the min-width is required to expand the body*/
+    min-width: 100%;
+    min-height: 100vh;
+    line-height: 160%;
+}
+
+
+/* Fixes wrapping text overlap issue */
+
+h2,
+h1 {
+    line-height: 110%;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+p {
+    word-spacing: 3px;
+}
+
+
+/*** BEGIN: HEADER ***/
+
+header {
+    padding: 1em 0;
+    white-space: nowrap;
+    font-family: "Roboto Black";
+    /*    background-color: #2a2f36;*/
+    background-color: #283647;
+}
+
+header ._row {
+    align-items: center;
+}
+
+header a {
+    order: -1;
+}
+
+header h1 {
+    flex: 1 1 0%;
+    /* flex-grow: 0 | flex-shrink: 1 | flex-basis: auto */
+}
+
+header .brand-name {
+    color: white;
+    padding: 1em;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+header .brand-name span {
+    color: #32C5D2;
+}
+
+header ._responsive-image {
+    min-width: 100px;
+}
+
+header ul {
+    flex-direction: column;
+    align-items: center;
+}
+
+header .info {
+    font-family: "Roboto Regular";
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+header .phone {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-size: 1.6rem;
+    color: white;
+}
+
+header .phone a {
+    text-decoration: none;
+    color: white;
+}
+
+header .email {
+    font-family: "Roboto Regular";
+    font-size: 1.1rem;
+    color: white;
+}
+
+header .email a {
+    text-decoration: none;
+    color: #32C5D2;
+}
+
+@media only screen and (max-width: 680px) {
+    header ._row {
+        flex-direction: column;
+    }
+}
+
+
+/*** END: HEADER ****/
+
+
+/*** BEGIN: MAIN NAV ****/
+
+.nav-bar {
+    border-top: 0.1em solid #32C5D2;
+    font-size: 1.2rem;
+    background-color: #202B38;
+}
+
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar a {
+    display: block;
+    padding: 0.7em 0.7em;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-bar a:hover {
+    color: white;
+    background-color: #32C5D2;
+    transition: background 0.2s ease;
+}
+
+.nav-bar .get-a-quote {
+/*    background-color: #FF7F00;*/
+/*    background-color: #3A4F66;*/
+/*    background-color: #2CAEBA;*/
+    background-color: #2BAAB5;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-bar ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-bar a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/*** BEGIN: MAIN ****/
+
+main {
+    /* Sticky footer: Pushes footer to the bottom */
+    flex: 1 0 0%;
+}
+
+main .main-content {
+    margin-left: 2em;
+}
+
+main aside {
+    order: -1;
+    flex: 0 0 250px;
+}
+
+.heading {
+    font-family: "Roboto Black";
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 0.1em solid #32C5D2;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+@media only screen and (max-width: 680px) {
+    main ._row {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+}
+
+
+/*** END: MAIN ****/
+
+
+/*** BEGIN: FOOTER ****/
+
+footer {
+    line-height: 180%;
+}
+
+footer section.info ._row {
+    flex-wrap: wrap-reverse;
+}
+
+footer section.info {
+    border-top: 0.3em solid #32C5D2;
+    background-color: #283647;
+    padding: 3em 0;
+}
+
+footer .brand {
+    flex: 1;
+    display: flex;
+}
+
+footer .brand img {
+    opacity: 0.8;
+}
+
+footer .links,
+footer .contact {
+    padding: 0 2em;
+    margin-left: 5em;
+}
+
+footer .links h3,
+footer .contact h3 {
+    color: white;
+    margin-bottom: 1em;
+    font-family: "Roboto Black";
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+footer .links a {
+    text-decoration: none;
+    color: #b1c4d0;
+    font-size: 1.1rem;
+}
+
+footer .links a:hover {
+    color: #32C5D2;
+}
+
+footer .contact {
+    color: #7e8b93;
+    font-size: 1.1rem;
+}
+
+footer .contact a {
+    text-decoration: none;
+    color: #32C5D2;
+}
+
+footer .copyright {
+    padding: 1em 0;
+    color: rgba(126, 139, 147, 0.7);
+    background-color: #202B38;
+}
+
+@media only screen and (max-width: 680px) {
+    footer ._row {
+        flex-direction: column-reverse;
+    }
+    footer .links,
+    footer .contact {
+        padding: 1em 0em;
+        margin: 0;
+    }
+}
+
+
+/*** END: FOOTER ****/
+
+
+/*** BEGIN: UTILITY CLASSES ***/
+
+._flex {
+    display: flex;
+    flex-direction: row;
+}
+
+._flex-column {
+    display: flex;
+    flex-direction: column;
+    /* Take the fullsize of the container*/
+    flex-grow: 1;
+}
+
+._inline-flex {
+    display: inline-flex;
+}
+
+._row {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /*    border: 1px solid #8b2398;*/
+}
+
+._responsive-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*** END: UTILITY CLASSES ***/
+
+
+/*** CSS Multi-Level Accordion Menu  ***/
+
+
+/* Styling top level items */
+
+.nav {
+    border-top: 0.3em solid #32C5D2;
+    font-size: 1.2rem;
+}
+
+.nav h2 {
+    padding: 1em 0;
+    padding-left: 0.5em;
+    text-transform: uppercase;
+    color: white;
+    background: #202B38;
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.nav a,
+.nav label {
+    display: block;
+    padding: .85rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #283647;
+    text-decoration: none;
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1);
+    -webkit-transition: all .05s ease-in;
+    transition: all .05s ease-in;
+}
+
+.nav a:focus,
+.nav a:hover,
+.nav label:focus,
+.nav label:hover {
+    color: rgba(255, 255, 255, 1);
+    background: #32C5D2;
+    transition: all 0.15s ease-in;
+}
+
+.nav label {
+    cursor: pointer;
+}
+
+
+/* Styling first level lists items */
+
+.group-list a,
+.group-list label {
+    padding-left: 2rem;
+    background: #424952;
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.group-list a:focus,
+.group-list a:hover,
+.group-list label:focus,
+.group-list label:hover {
+    background: #32C5D2;
+}
+
+
+/* Styling second level list items */
+
+.sub-group-list a,
+.sub-group-list label {
+    padding-left: 4rem;
+    background: #4C535E;
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.sub-group-list a:focus,
+.sub-group-list a:hover,
+.sub-group-list label:focus,
+.sub-group-list label:hover {
+    background: #32C5D2;
+}
+
+
+/** Styling third level list items */
+
+.sub-sub-group-list a,
+.sub-sub-group-list label {
+    padding-left: 6rem;
+    background: #505863;
+    box-shadow: inset 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.sub-sub-group-list a:focus,
+.sub-sub-group-list a:hover,
+.sub-sub-group-list label:focus,
+.sub-sub-group-list label:hover {
+    background: #32C5D2;
+}
+
+
+/* Hide nested lists */
+
+.group-list,
+.sub-group-list,
+.sub-sub-group-list {
+    height: 100%;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .35s ease-in-out;
+    transition: max-height .35s ease-in-out;
+}
+
+.nav__list input[type=checkbox]:checked+label+ul {
+    /* reset the height when checkbox is checked */
+    max-height: 1000px;
+}
+
+
+/* Rotating chevron icon */
+
+
+/*
+label>i {
+    float: right;
+    -webkit-transition: -webkit-transform .35s ease;
+    transition: transform .35s ease;
+}
+
+.nav__list input[type=checkbox]:checked+label>i {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+*/
+
+
+/*** BEGIN: PRODUCTS PAGE ***/
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: stretch;
+}
+
+.product-item {
+    /* Required for the hover button to work*/
+    position: relative;
+    flex-grow: 1;
+    background: white;
+    width: 300px;
+    max-width: 50%;
+    /* Each product item wil span only 50% of the available space, or two items per row */
+    padding: 10px;
+    margin: 0 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Properly scale product items for widths bellow 950px */
+
+@media only screen and (max-width: 950px) {
+    .product-item {
+        width: 280px;
+    }
+}
+
+
+/* Properly scale product items for widths bellow 886px */
+
+@media only screen and (max-width: 886px) {
+    .product-item {
+        width: 280px;
+        max-width: 100%;
+    }
+}
+
+
+/* Properly scale product items for widths bellow 680px */
+
+@media only screen and (max-width: 680px) {
+    .product-item {
+        width: 280px;
+        max-width: 50%;
+    }
+}
+
+
+/* Properly scale product items for widths bellow 607px */
+
+@media only screen and (max-width: 607px) {
+    .product-item {
+        width: 300px;
+        max-width: 100%;
+    }
+}
+
+.product-item ._responsive-image {
+    width: 100%;
+}
+
+.product-item a {
+    text-decoration: none;
+    color: #353B42;
+}
+
+.product-item h2 {
+    font-size: 1.3rem;
+    padding: 1em 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.product-item figure {
+    margin: 0;
+    padding: 0;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+    -webkit-transition: opacity 0.1s ease-in-out;
+}
+
+.product-item .text {
+    flex-grow: 1;
+}
+
+.product-btn {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    padding: 0.8em 0;
+    color: #ffffff;
+    background-color: #d8232f;
+    transition: all 0.15s ease-in;
+    transform: translate(-50%, -85%);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.product-item:hover {
+    background-color: #efefef;
+    transition: all 0.2s ease-in;
+}
+
+.product-item:hover .product-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-btn:hover {
+    background-color: #ac1c25;
+}
+
+@media only screen and (max-width: 680px) {
+    section.content {
+        flex-wrap: wrap;
+    }
+    .product {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+/**** Product Page ****/
+
+
+/* Product Details */
+
+ul.product-details {
+    list-style-type: square;
+    padding-left: 2em;
+    padding-bottom: 1em;
+}
+
+ul.product-details li:not(:last-child) {
+    margin-bottom: 0.8em;
+}
+
+h3.product-details {
+    font-size: 1.1rem;
+    margin-bottom: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2.product-details {
+    font-size: 1.0rem;
+    font-weight: 700;
+    margin-bottom: 1.2em;
+    text-transform: uppercase;
+}
+
+
+/* Product Price Table */
+
+table.table {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.table th {
+    background-color: #EEE;
+    font-weight: 700;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 0.25em;
+}
+
+.table tr {
+    border-bottom: 1px solid #DDD;
+}
+
+.table .table-row:hover {
+    background-color: #32C5D2;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .table tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0.5em 0;
+        border-bottom: 1px solid rgba(3, 3, 3, 0.2);
+    }
+    .table td,
+    .table th {
+        flex: 1 1 150px;
+    }
+}
+
+#slider.flexslider {
+    margin-bottom: 0;
+}
+
+.product-images {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 300px;
+    width: 40%;
+}
+
+@media only screen and (max-width: 680px) {
+    .product-images {
+        /*  display: block;*/
+        min-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* Fixes the arrow cutting off bug */
+
+.flex-direction-nav a {
+    line-height: 40px;
+}
+
+.product-description {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 60%;
+    margin-left: 3em;
+}
+
+.product-description p {
+    margin-bottom: 1.4em;
+}
+
+@media only screen and (max-width: 680px) {
+    main section ._row {
+        flex-direction: column;
+    }
+    .product-description {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5em;
+    }
+}
+
+
+/* Android 2.3 :checked fix */
+
+@-webkit-keyframes fake {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fake {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    -webkit-animation: fake 1s infinite;
+    animation: fake 1s infinite;
+}
+
+.worko-tabs {
+    /*    margin: 20px;*/
+    width: 100%;
+}
+
+.worko-tabs .state {
+    position: absolute;
+    left: -10000px;
+}
+
+.worko-tabs .flex-tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.worko-tabs .flex-tabs .tab {
+    flex-grow: 1;
+    max-height: 40px;
+}
+
+.worko-tabs .flex-tabs .panel {
+    background-color: #fff;
+    padding: 20px;
+    min-height: 300px;
+    display: none;
+    width: 100%;
+    flex-basis: auto;
+}
+
+.worko-tabs .tab {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    background-color: #f2f2f2;
+    cursor: hand;
+    cursor: pointer;
+    border-left: 10px solid #ccc;
+}
+
+.worko-tabs .tab:hover {
+    background-color: #fff;
+}
+
+#tab-one:checked~.tabs #tab-one-label,
+#tab-two:checked~.tabs #tab-two-label,
+#tab-three:checked~.tabs #tab-three-label,
+#tab-four:checked~.tabs #tab-four-label {
+    background-color: #fff;
+    cursor: default;
+    border-left-color: #32C5D2;
+}
+
+#tab-one:checked~.tabs #tab-one-panel,
+#tab-two:checked~.tabs #tab-two-panel,
+#tab-three:checked~.tabs #tab-three-panel,
+#tab-four:checked~.tabs #tab-four-panel {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .flex-tabs {
+        flex-direction: column;
+    }
+    .flex-tabs .tab {
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+    }
+    .flex-tabs .tab:last-of-type {
+        border-bottom: none;
+    }
+    .flex-tabs #tab-one-label {
+        order: 1;
+    }
+    .flex-tabs #tab-two-label {
+        order: 3;
+    }
+    .flex-tabs #tab-three-label {
+        order: 5;
+    }
+    .flex-tabs #tab-four-label {
+        order: 7;
+    }
+    .flex-tabs #tab-one-panel {
+        order: 2;
+    }
+    .flex-tabs #tab-two-panel {
+        order: 4;
+    }
+    .flex-tabs #tab-three-panel {
+        order: 6;
+    }
+    .flex-tabs #tab-four-panel {
+        order: 8;
+    }
+    #tab-one:checked~.tabs #tab-one-label,
+    #tab-two:checked~.tabs #tab-two-label,
+    #tab-three:checked~.tabs #tab-three-label,
+    #tab-four:checked~.tabs #tab-four-label {
+        border-bottom: none;
+    }
+    #tab-one:checked~.tabs #tab-one-panel,
+    #tab-two:checked~.tabs #tab-two-panel,
+    #tab-three:checked~.tabs #tab-three-panel,
+    #tab-four:checked~.tabs #tab-four-panel {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+
+/* Audio Player */
+
+.audio-player,
+.note-box {
+    padding: 2em 0;
+    border-left: 0.3em solid #d8232f;
+    padding-left: 2em;
+    /*    background: url("../index.html") no-repeat center center fixed;*/
+    /*    background-size: cover;*/
+    background-color: #eee;
+}
+
+.product-description h3 {
+    padding: 1em 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#carousel {
+    margin: 0;
+}
+
+
+/* More Info */
+
+.pdescription {
+    margin-top: 80px;
+    background-color: #eee;
+    padding-bottom: 80px;
+}
+
+.pdescription ._row {
+    flex: 1 1 0%;
+}
+
+.pdescription .pdetails {
+    font-family: "Roboto Black";
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-bottom: 0.1em solid #32C5D2;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+
+/* Owl Carousel */
+.owl-img-description {
+    text-align: center;
+    padding: 1em;
+    font-family: "Roboto Black";
+    font-size: 1.2rem;
+}
+
+/* Product Page - Blank Pucks */
+
+.flex-gallery {
+    padding: .5vw;
+    flex-flow: row wrap;
+    display: flex;
+}
+
+.flex-gallery figure {
+    flex: auto;
+    width: 300px;
+    max-width: 100%;
+    margin: .5vw;
+}
+
+.flex-gallery figure img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 400px) {
+    .flex-gallery figure {
+        margin: 0;
+    }
+    .flex-gallery {
+        padding: 0;
+    }
+}
+
+/* Flex gallery 2 - max 4 images per row */
+
+.flex-gallery-2 {
+    flex-flow: row wrap;
+    display: flex;
+}
+
+.flex-gallery-2 > div {
+    flex: 1 20%;
+    width: 300px;
+}
+.flex-gallery-2 > div {
+    margin: 20px;
+}
+.flex-gallery-2 img {
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 800px) {
+    .flex-gallery-2 > div {
+        flex: 1 40%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .flex-gallery-2 > div {
+        flex: 1 51%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Flex gallery 3 - max 2 images per row */
+
+.flex-gallery-3 {
+    flex-flow: row wrap;
+    display: flex;
+}
+
+.flex-gallery-3 > div {
+    flex: 1 40%;
+    width: 300px;
+}
+.flex-gallery-3 > div {
+    margin: 10px;
+}
+.flex-gallery-3 img {
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 500px) {
+    .flex-gallery-3 > div {
+        flex: 1 51%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* TABLES */
+
+
+/* Price Table 1 */
+
+.price-table-1 {
+    width: 100%;
+}
+
+.price-table-1 th {
+    font-weight: 700;
+}
+
+.price-table-1 tr {
+    border-bottom: 1px solid #DDD;
+}
+
+.price-table-1 th,
+.price-table-1 td {
+    text-align: left;
+    padding: 0.3em 0.5em;
+}
+
+.price-table-1 .table-row:hover {
+    background-color: #32C5D2;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .price-table-1 tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0.5em 0;
+        border-bottom: 1px solid rgba(3, 3, 3, 0.2);
+    }
+    .price-table-1 td,
+    .price-table-1 th {
+        flex: 1 1 150px;
+    }
+}
+
+
+/* Price Table 2 */
+
+.price-table-2 {
+    width: 100%;
+}
+
+.price-table-2 th,
+.price-table-2 td {
+    text-align: center;
+    padding: 0.4em 1em;
+    white-space: nowrap;
+}
+
+.price-table-2 th {
+    font-weight: 900;
+}
+
+
+/* Set the background color for every other row */
+
+.price-table-2 tr:not(:first-child) tr:nth-child(even) {
+    background-color: #FAFAFA
+}
+
+
+/* Hover on mouse over row, but exclude the first cell */
+
+.price-table-2 tbody tr:hover td:not(:first-child) {
+    background-color: #DDD;
+}
+
+
+/* Select the second column in the table */
+
+.price-table-2 col:nth-child(2) {
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.price-table-2 thead tr:nth-child(1) {
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.price-table-2 thead tr:nth-child(2) {
+    background-color: #F2F2F2;
+}
+
+.price-table-2 tbody tr:nth-child(1) th:nth-child(1) {
+    background-color: #F2F2F2;
+    vertical-align: middle;
+}
+
+
+/* Price Table 3 */
+
+.price-table-3 {
+    width: 100%;
+}
+
+.price-table-3 th,
+.price-table-3 td {
+    text-align: center;
+    padding: 0.4em 1em;
+    white-space: nowrap;
+}
+
+.price-table-3 th {
+    font-weight: 900;
+}
+
+
+/* Set the background color for every other row */
+
+.price-table-3 tr:not(:first-child) tr:nth-child(even) {
+    background-color: #FAFAFA
+}
+
+
+/* Hover on mouse over row, but exclude the first cell */
+
+.price-table-3 tbody tr:hover td:not(:first-child) {
+    background-color: #DDD;
+}
+
+.price-table-3 col:nth-child(1) {
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+.price-table-3 thead tr:nth-child(1) {
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.price-table-3 thead tr:nth-child(2) {
+    background-color: #F2F2F2;
+}
+
+.price-table-3 tbody tr:nth-child(1) th:nth-child(1) {
+    background-color: #F2F2F2;
+    vertical-align: middle;
+}
+
+
+/* END OF TABLES */
+
+
+/* Paddings */
+
+
+/* ORDERED LISTS */
+
+
+/* Order List 1 */
+
+ol.ordered-list-1 {
+    list-style-type: decimal;
+    padding-left: 3rem;
+}
+
+ol.ordered-list-1 li {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+
+/* HEADINGS */
+
+
+/* Heading 1 */
+
+h1.heading-1 {
+    font-family: "Roboto Black";
+    font-size: 2.4em;
+    text-transform: uppercase;
+    border-bottom: 0.1em solid #32c5d2;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+h1.heading-2 {
+    position: relative;
+    z-index: 1;
+    font-family: "Roboto Black";
+    font-size: 2.6em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 1em;
+}
+
+h1.heading-2::before {
+    overflow: hidden;
+    border-top: 1px solid #d0d7de;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+h1.heading-2>span {
+    padding: 0 20px;
+    color: #323d55;
+}
+
+
+/* Heading 2 */
+
+h2.heading-1 {
+    font-family: "Roboto Black";
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: 0.1em solid #ccc;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+h2.heading-2 {
+    font-family: "Roboto Black";
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: none;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+
+/* h2.heading-3 */
+
+h2.heading-3 {
+    position: relative;
+    z-index: 1;
+    font-family: "Roboto Black";
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+h2.heading-3::before {
+    overflow: hidden;
+    border-top: 1px solid #d0d7de;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+h2.heading-3>span {
+    padding: 0 20px;
+}
+/* End of h2.heading-3 */
+
+
+h3.heading-1 {
+    font-family: "Roboto Black";
+    font-size: 1.4em;
+    text-transform: uppercase;
+    border-bottom: 0.1em solid #ccc;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+h3.heading-2 {
+    font-family: "Roboto Black";
+    font-size: 1.4em;
+    text-transform: uppercase;
+    border-bottom: none;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+h4.heading-1 {
+    font-family: "Roboto Black";
+    font-size: 1em;
+    text-transform: uppercase;
+    border-bottom: 0.1em solid #ccc;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+h4.heading-2 {
+    font-family: "Roboto Black";
+    font-size: 1em;
+    text-transform: uppercase;
+    border-bottom: none;
+    padding: 0 0 0.5em 0;
+    margin-bottom: 1em;
+    color: #353B42;
+}
+
+
+/* Flexbox */
+
+.u-flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.u-flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.u-flex-inline {
+    display: inline-flex;
+}
+
+.u-flex-content-center {
+    justify-content: center;
+}
+
+
+/* Layout */
+
+.u-row {
+    width: 100%;
+    /* Make the rows span the full screen size. Needed to properly display content. */
+    max-width: 1170px;
+    margin: 0 auto;
+    /* Center on screen */
+    /*
+    padding-left: 1rem;
+    padding-right: 1rem;
+*/
+}
+
+
+/* Alert Boxes */
+
+p[class^="u-alert-box"] {
+    padding: 2em 0;
+    padding-left: 2em;
+}
+
+p span[class^="u-alert-button"] {
+    float: right;
+    font-size: 2em;
+    line-height: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.u-alert-box-1 {
+    border-left: 0.3em solid #d8232f;
+}
+
+.u-alert-button-1 {
+    color: #d8232f;
+}
+
+.u-alert-box-2 {
+    border-left: 0.3em solid #32C5D2;
+}
+
+.u-alert-button-2 {
+    color: #32C5D2;
+}
+
+
+/* ANCHORS */
+
+
+/* Anchor 1 */
+
+.anchor-1 {
+    border-bottom: 1px dotted #32C5D2;
+    color: #32C5D2;
+    text-decoration: none;
+}
+
+.anchor-1:hover {
+    border-bottom: none;
+    color: #3FD0E0;
+}
+
+
+/* UTILITY CLASSES */
+
+
+/* Background Colors */
+
+.u-bg-color-white {
+    background-color: white;
+}
+
+.u-bg-color-grey {
+    background-color: #d4d4d4 !important;
+}
+
+.u-bg-color-light-grey {
+    background-color: #eee;
+}
+
+.u-bg-color-light-grey-2 {
+    background-color: #f2f2f2;
+}
+
+.u-bg-color-light-blue {
+    background-color: #32C5D2;
+}
+
+.u-bg-color-dark-blue {
+    background-color: #2F4054;
+}
+
+
+
+/* Margins */
+
+.u-margin-top-30 {
+    margin-top: 30px;
+}
+
+.u-margin-top-60 {
+    margin-top: 60px;
+}
+
+.u-margin-top-80 {
+    margin-top: 80px;
+}
+
+.u-margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.u-margin-bottom-60 {
+    margin-bottom: 60px;
+}
+
+.u-margin-bottom-80 {
+    margin-bottom: 80px;
+}
+
+.u-scroll-xy {
+    overflow: auto;
+}
+
+.u-scroll-x {
+    overflow-x: auto;
+}
+
+._padding-top-60 {
+    margin-top: 60px;
+}
+
+
+/* paddings */
+
+.u-padding-top-60 {
+    padding-top: 60px;
+}
+
+.u-padding-bottom-60 {
+    padding-bottom: 60px;
+}
+
+.u-padding-top-80 {
+    padding-top: 80px;
+}
+
+.u-padding-bottom-80 {
+    padding-bottom: 80px;
+}
+
+
+/* old padding */
+
+._padding-top-80 {
+    margin-top: 80px;
+}
+
+
+/* Fonts Awesome Icons */
+
+.u-icon::before {
+    display: inline-block;
+    margin-right: .5em;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+
+/* END OF UTILITY CLASSES */
+
+
+/* TABS */
+
+
+/* Horizontal Tabs 1 */
+
+.h-tabs-1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h-tabs-1 label {
+    background: #eee;
+    border: 1px solid #CCC;
+    padding: .7em 1em;
+    cursor: pointer;
+    z-index: 1;
+    margin-left: -1px;
+}
+
+.h-tabs-1 label:first-of-type {
+    margin-left: 0;
+}
+
+.h-tabs-1 .tab-content {
+    width: 100%;
+    margin-top: -1px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    order: 1;
+}
+
+.h-tabs-1 input[type=radio],
+.h-tabs-1 .tab-content {
+    display: none;
+    background-color: #FFF;
+}
+
+.h-tabs-1 input[type=radio]:checked+label {
+    background: #FFF;
+    border-bottom: none;
+}
+
+.h-tabs-1 input[type=radio]:checked+label+.tab-content {
+    display: block;
+}
+
+@media (max-width: 300px) {
+    .h-tabs-1 .tab-content {
+        order: 0;
+    }
+    .h-tabs-1 {
+        flex-direction: column;
+    }
+    .h-tabs-1 label {
+        margin-left: 0;
+    }
+    .h-tabs-1 input[type=radio]+label+.tab-content {
+        border-top: none;
+    }
+    .h-tabs-1 input[type=radio]:checked+label+.tab-content:not(:last-of-type) {
+        border-bottom: none;
+    }
+}
+
+
+/* Tabs */
+/* Source: https://codepen.io/mikestreety/pen/yVNNNm */
+.h-tabs-2 {
+    display: flex;
+    /* make sure it wraps */
+    flex-wrap: wrap;
+    border: 1px solid #eee;  
+    background: #eee;
+}
+
+.h-tabs-2 label {
+    /* put the labels first */
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #ddd;
+    font-weight: bold;
+    transition: background ease 0.2s;
+}
+
+.h-tabs-2 label:hover {
+    background-color: #ccc;
+}
+.h-tabs-2 .content {
+    /*  Put the tabs last */    
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+}
+
+.h-tabs-2 input[type="radio"] {
+    display: none;
+}
+
+.h-tabs-2 input[type="radio"]:checked+label {
+    background: #fff;
+}
+
+.h-tabs-2 input[type="radio"]:checked+label+.content {
+    display: block;
+
+}
+
+@media (max-width: 45em) {
+    .h-tabs-2 {
+        background: none;
+        border: none;
+    }
+    .h-tabs-2 input[type="radio"]:checked+label {
+        background: #32C5D2;
+        color: white;
+    }     
+    .h-tabs-2 .content, .h-tabs-2 label {
+        order: initial;
+    }
+    .h-tabs-2 label {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0.2rem;
+    }
+}
+
+/* END OF TABS */
+
+
+/* OVERLAYS */
+
+
+/* Overlay 1*/
+
+/* <!-- HTML Overlay 1-->
+<div class="overlay-1-container">
+    <img class="owl-lazy overlay-1-image" data-src="Images/products/towels/custom-skate-towel/custom-skate-towel-2.png" alt="">
+
+    <div class="overlay-1-overlay">
+        <div class="overlay-1-text"><a class="overlay-1-anchor" href="#">Details</a></div>
+    </div>
+</div> */
+
+.overlay-1-container {
+    position: relative;
+    width: 100%;
+}
+
+.overlay-1-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-1-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.overlay-1-container:hover .overlay-1-overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, .75);
+}
+
+.overlay-1-text {
+    opacity: 1;
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    /* overflow: hidden;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.overlay-1-anchor {
+    display: block;
+    padding: 10px 20px;
+    border: solid 1px #FFF;
+    text-decoration: none;
+    color: #FFF;
+}
+
+.overlay-1-anchor:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* Overlay 2 */
+
+.overlay-2-container {
+    position: relative;
+    width: 100%;
+}
+
+/*
+.overlay-2-overlay {
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 100%;
+    transform: translateY(-100%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(32, 43, 56, 0.85);
+    background: rgba(32, 43, 56, 0.85);
+    padding: 5px;
+}
+*/
+.overlay-2-image { opacity: 1; }
+
+.overlay-2-overlay {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.overlay-2-anchor {
+    padding: 2px 7px 2px 7px;
+    text-decoration: none;
+    color: rgb(32, 43, 56);
+    white-space: nowrap;
+    font-family: "Roboto Regular" !important;
+    font-size: 1.2rem !important;
+}
+
+
+.overlay-2-container:hover .overlay-2-anchor {
+    background-color: #ddd;
+    color: rgb(32, 43, 56, 0.7);
+    transition: background-color 0.5s;    
+}
+.overlay-2-container:hover img {
+
+/*
+    -webkit-filter: grayscale(100%);  
+    filter: grayscale(100%);    
+*/
+   transition: filter 0.3s;
+}
+
+
+/* END OF OVERLAYS */
+
+
+/* ACCORDIONS */
+
+
+/* Accordion 1 */
+
+button.accordion-1 {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion-1.active,
+button.accordion-1:hover {
+    background-color: #ddd;
+}
+
+button.accordion-1:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion-1.active:after {
+    content: "\2212";
+}
+
+div.accordion-1-panel {
+    padding: 0 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* END OF ACCORDIONS */
+
+
+/* BUTTONS */
+
+
+/* Button 1 */
+
+.button-1 {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-1-green {
+    background-color: #4CAF50;
+}
+
+
+/* Green */
+
+.button-1-blue {
+    background-color: #008CBA;
+}
+
+
+/* Blue */
+
+.button-1-red {
+    background-color: #f44336;
+}
+
+
+/* Red */
+
+.button-1-gray {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+
+/* Gray */
+
+.button-1-black {
+    background-color: #555555;
+}
+
+
+/* Black */
+
+
+/* END OF BUTTONS */
+
+
+/* PAGES */
+
+
+/* Contact Us */
+
+.contact-us-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#google-map {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+
+.contact-us-info {
+    display: flex;
+}
+
+.contact-us-info-panel {
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 680px) {
+    .contact-us-info {
+        flex-direction: column;
+    }
+}
+
+/* Hip Flask */
+
+.hip-flask-carousel-bg {
+    background-image: url("../Images/products/flasks/hip-flask/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Simple Bib */
+.simple-bib-carousel-bg {
+    background-image: url("../index.html");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #2B3B4D;
+}
+
+/* Flags */
+.flag-carousel-bg {
+    background-image: url("../Images/products/flags/3x5-flag/slide-1-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #384B63;
+}
+
+/* Flip Flops */
+.flip-flops-carousel-bg {
+    background-image: url("../Images/products/clothing/flip-flops/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Socks */
+.socks-carousel-bg {
+    background-image: url("../Images/products/clothing/socks/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* 9x7 Mouse Pad */
+.socks-carousel-bg {
+    background-image: url("../Images/products/mouse-pads/9x7-mouse-pad/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Samsung Galaxy S6 Phone Case */
+.samsung-galaxy-s6-carousel-bg {
+    background-image: url("../Images/products/phone-cases/samsung-galaxy-s6/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Samsung Galaxy S5 Phone Case */
+.samsung-galaxy-s5-carousel-bg {
+    background-image: url("../Images/products/phone-cases/samsung-galaxy-s5/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Samsung Galaxy S4 Phone Case */
+.samsung-galaxy-s4-carousel-bg {
+    background-image: url("../Images/products/phone-cases/samsung-galaxy-s4/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Samsung Galaxy S3 Phone Case */
+.samsung-galaxy-s3-carousel-bg {
+    background-image: url("../Images/products/phone-cases/samsung-galaxy-s3/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPhone 7 Phone Case */
+.apple-iphone-7-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-iphone-7/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPhone 6 Plus Phone Case */
+.apple-iphone-6-plus-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-iphone-6-plus/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPhone 6 Phone Case */
+.apple-iphone-6-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-iphone-6/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPhone 5c Phone Case */
+.apple-iphone-5c-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-iphone-5c/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPhone 5 Phone Case */
+.apple-iphone-5-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-iphone-5/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPhone 4 Phone Case */
+.apple-iphone-4-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-iphone-4/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPod Touch 5 Phone Case */
+.apple-ipod-touch-5-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-ipod-touch-5/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Apple iPod Touch 4 Phone Case */
+.apple-ipod-touch-4-carousel-bg {
+    background-image: url("../Images/products/phone-cases/apple-ipod-touch-4/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Teddy Bear */
+.teddy-bear-carousel-bg {
+    background-image: url("../Images/products/teddy-bears/teddy-bear/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #F0F0F0;
+}
+
+/* Ceramic Mug */
+.ceramic-mug-carousel-bg {
+    background-image: url("../Images/products/mugs/ceramic-mug/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #FFFFFF;
+}
+
+/* Travel Mug */
+.travel-mug-carousel-bg {
+    background-image: url("../Images/products/mugs/travel-mug/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #FFFFFF;
+}
+
+/* Honk-honk Horn */
+.honk-honk-horn-carousel-bg {
+    background-image: url("../Images/products/noisemakers/honk-honk-horn/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #FFFFFF;
+}
+
+/* Pom-Poms */
+.pom-poms-carousel-bg {
+    background-image: url("../Images/products/cheering-stuff/pom-poms/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #FFFFFF;
+}
+
+/* Licence Plate Covers */
+.licence-plate-covers-carousel-bg {
+    background-image: url("../Images/products/licence-plates/licence-plate-covers/slides/slides-bg.png");
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: #E6E6E6;
+}
+
+/* END OF PAGES */
